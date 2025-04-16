@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G4stly Links</title>
+    <link rel="icon" type="image/png" href="assets/92.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/92.png" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="profile-image">
+                <img src="https://tryhackme-images.s3.amazonaws.com/user-avatars/8d8c4a736e7e619be6b5653f6cbe83fd.png" alt="Profile Image">
+            </div>
+            <h1 class="profile-name"><a href="https://g4stly.tr">Sefa Ağardan</a></h1>
+            <p class="profile-bio">software developer</p>
+        </div>
+
+        <!-- Links Sections -->
+        <div class="links-container">
+            <!-- Links Section -->
+            <div class="links-section">
+                <h2 class="section-title">Links</h2>
+                <div class="links-list">
+                    <a href="https://g4stly.tr" class="link-card row-link" data-platform="website">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="link-details">
+                                <h3>g4stly.tr</h3>
+                                <p>visit to see my public projects and demo versions of some of them</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/g4stlyx" class="link-card row-link" data-platform="github">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="link-details">
+                                <h3>GitHub</h3>
+                                <p>g4stlyx</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/sef4" class="link-card row-link" data-platform="linkedin">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="link-details">
+                                <h3>LinkedIn</h3>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://tryhackme.com/p/g4stly" class="link-card row-link" data-platform="tryhackme">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="link-details">
+                                <h3>TryHackMe</h3>
+                                <p>i enjoy hacking things</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://instagram.com/sefa.js" class="link-card row-link" data-platform="instagram">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="link-details">
+                                <h3>Instagram</h3>
+                                <p>sefa.js</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- <a href="mailto:contact@g4stly.tr" class="link-card row-link" data-platform="gmail">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="link-details">
+                                <h3>Email</h3>
+                            </div>
+                        </div>
+                    </a> -->
+                    
+                    <a href="https://open.spotify.com/user/sefa616161" class="link-card row-link" data-platform="spotify">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fab fa-spotify"></i>
+                            </div>
+                            <div class="link-details">
+                                <h3>Spotify</h3>
+                                <p>i like metal</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- <a href="https://youtube.com/@youryoutubeid" class="link-card row-link" data-platform="youtube">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="link-details">
+                                <h3>YouTube</h3>
+                            </div>
+                        </div>
+                    </a> -->
+                    
+                    <!-- <a href="https://twitter.com/yourtwitterhandle" class="link-card row-link" data-platform="twitter">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="link-details">
+                                <h3>Twitter</h3>
+                            </div>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; <span id="current-year">2025</span> G4stly Links</p><br>
+            <p>Better Than Linktree (Claude says it not me)</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Theme toggle functionality
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const body = document.body;
+
+        // Check for saved theme preference or use preferred color scheme
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+            body.classList.add('dark-theme');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            
+            // Save theme preference
+            const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // Add animation to links on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.link-card');
+            links.forEach((link, index) => {
+                setTimeout(() => {
+                    link.classList.add('appear');
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>
